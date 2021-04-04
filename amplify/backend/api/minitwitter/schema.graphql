@@ -1,5 +1,5 @@
-type Todo @model {
+type Tweet @model {
   id: ID!
-  name: String!
-  description: String
+  message: String!
+  likes: Int
 }
