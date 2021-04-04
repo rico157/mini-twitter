@@ -1,1 +1,10 @@
-{}
+{
+  "auth": {
+    "minitwitterdff71e8b": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false
+    }
+  }
+}

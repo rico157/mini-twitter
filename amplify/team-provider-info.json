@@ -10,6 +10,11 @@
       "StackName": "amplify-minitwitter-dev-151541",
       "StackId": "arn:aws:cloudformation:eu-west-2:888817637314:stack/amplify-minitwitter-dev-151541/3e7d1840-9550-11eb-abe0-0290fbe937bc",
       "AmplifyAppId": "di7nulbm7s0x8"
+    },
+    "categories": {
+      "auth": {
+        "minitwitterdff71e8b": {}
+      }
     }
   }
 }
