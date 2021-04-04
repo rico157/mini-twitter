@@ -1,8 +1,9 @@
 import { withAuthenticator, AmplifySignOut } from "@aws-amplify/ui-react";
 import Amplify from "aws-amplify";
-import { useEffect, useState } from "react";
 import awsconfig from "./aws-exports";
+import { useEffect, useState } from "react";
 import { getTweets } from "./utils/api";
+import ListTweets from "./Components/ListTweets";
 
 Amplify.configure(awsconfig);
 
@@ -10,20 +11,15 @@ export function App() {
   const [tweets, setTweets] = useState([]);
 
   useEffect(() => {
-    getTweets().then((tweetsData) => setTweets(tweetsData));
+    getTweets()
+      .then((tweetsData) => setTweets(tweetsData))
+      .catch(console.log);
   }, []);
 
   return (
     <>
       <h1>Hello World!</h1>
-      {tweets?.map((tweet) => (
-        <div key={tweet.id}>
-          <h2>{tweet.message}</h2>
-          <h2>{tweet.id}</h2>
-          <h2>{tweet.createdAt}</h2>
-          <h2>{tweet.likes}</h2>
-        </div>
-      ))}
+      <ListTweets tweets={tweets} />
       <AmplifySignOut />
     </>
   );
