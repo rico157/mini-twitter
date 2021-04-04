@@ -1,8 +1,10 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import { render } from "@testing-library/react";
+import AppWithAuthenticator from "./App";
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+test("renders Sign-Up page", async () => {
+  const { getByText } = render(<AppWithAuthenticator />);
+  const signUp = getByText(
+    (_, element) => element.tagName.toLowerCase() === "amplify-authenticator"
+  );
+  expect(signUp).toBeTruthy();
 });
