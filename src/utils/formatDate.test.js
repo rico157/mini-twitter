@@ -13,3 +13,9 @@ test("returns the correct formatted date in less than a minute", () => {
   expect(formatDate(new Date() - 30000)).toEqual("half a minute ago");
   expect(formatDate(new Date() - 50000)).toEqual("less than a minute ago");
 });
+
+test("returns the correct formatted date in less than an hour", () => {
+  expect(formatDate(new Date() - 90000)).toEqual("one minute ago");
+  expect(formatDate(new Date() - 3000000)).toEqual("50 minutes ago");
+  expect(formatDate(new Date() - 5000000)).toEqual("1 hour ago");
+});
