@@ -5,5 +5,5 @@ test("returns a string", () => {
 });
 
 test("returns the correct formatted date", () => {
-  expect(formatDate(new Date())).toMatch(/\d{2}\/\d{2}\/\d{4}$/);
+  expect(formatDate(new Date())).toEqual("just now");
 });
