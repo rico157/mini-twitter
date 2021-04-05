@@ -1,22 +1,41 @@
+import styled from "styled-components";
 import formatDate from "../utils/formatDate";
+
+const StyledList = styled.ul`
+  list-style: none;
+  margin: 0;
+  padding: 0px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+`;
+
+const StyledTweet = styled.ul`
+  border: 1px solid #aaa;
+  padding: 30px;
+  p {
+    margin-bottom: 10px;
+    margin-top: 0px;
+  }
+  i {
+    color: #777;
+  }
+`;
 
 const ListTweets = ({ tweets }) => {
   return (
-    <ul>
+    <StyledList>
       {tweets?.map((tweet) => {
-        const { id, message, createdAt, likes = 0 } = tweet;
+        const { id, message, createdAt } = tweet;
         const date = formatDate(createdAt);
 
         return (
-          <li key={id}>
+          <StyledTweet key={id}>
             <p>{message}</p>
-            <p>{id}</p>
-            <p>{date}</p>
-            <p>{likes}</p>
-          </li>
+            <i>{date}</i>
+          </StyledTweet>
         );
       })}
-    </ul>
+    </StyledList>
   );
 };
 
