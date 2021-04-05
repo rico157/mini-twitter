@@ -32,12 +32,15 @@ const StyledForm = styled.form`
 const CreateTweet = ({ tweets, setTweets, insertTweet }) => {
   const [inputTweet, setInputTweet] = useState("");
 
+  // Update state with the input when onChange is called
   const handleChange = (event) => {
     setInputTweet(event.target.value);
   };
 
+  // Calls api to create a new tweet
   const handleSubmit = () => {
     insertTweet({ message: inputTweet, type: "tweet" })
+      // Add tweet to the list of tweets optimistically
       .then(({ createTweet }) => setTweets([createTweet, ...tweets]))
       .catch(console.log);
   };
