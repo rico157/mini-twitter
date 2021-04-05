@@ -29,3 +29,7 @@ test("returns the correct formatted date in less than a week", () => {
   expect(formatDate(new Date() - 300000000)).toEqual("3 days ago");
   expect(formatDate(new Date() - 700000000)).toEqual("1 week ago");
 });
+
+test("returns the correct formatted date in more than a week", () => {
+  expect(formatDate(new Date() - 900000000)).toMatch(/on \d{2}\/\d{2}\/\d{4}$/);
+});
