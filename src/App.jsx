@@ -7,7 +7,7 @@ import ListTweets from "./Components/ListTweets";
 
 Amplify.configure(awsconfig);
 
-export function App() {
+export const App = () => {
   const [tweets, setTweets] = useState([]);
   const [inputTweet, setInputTweet] = useState("");
 
@@ -41,6 +41,6 @@ export function App() {
       <AmplifySignOut />
     </>
   );
-}
+};
 
 export default withAuthenticator(App);

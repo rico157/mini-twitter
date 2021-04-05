@@ -1,6 +1,6 @@
 import formatDate from "../utils/formatDate";
 
-function ListTweets({ tweets }) {
+const ListTweets = ({ tweets }) => {
   return (
     <ul>
       {tweets?.map((tweet) => {
@@ -18,6 +18,6 @@ function ListTweets({ tweets }) {
       })}
     </ul>
   );
-}
+};
 
 export default ListTweets;
