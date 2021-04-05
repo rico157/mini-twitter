@@ -1,14 +1,21 @@
+import formatDate from "../utils/formatDate";
+
 function ListTweets({ tweets }) {
   return (
     <ul>
-      {tweets?.map((tweet) => (
-        <li key={tweet.id}>
-          <p>{tweet.message}</p>
-          <p>{tweet.id}</p>
-          <p>{tweet.createdAt}</p>
-          <p>{tweet.likes}</p>
-        </li>
-      ))}
+      {tweets?.map((tweet) => {
+        const { id, message, createdAt, likes = 0 } = tweet;
+        const date = formatDate(createdAt);
+
+        return (
+          <li key={id}>
+            <p>{message}</p>
+            <p>{id}</p>
+            <p>{date}</p>
+            <p>{likes}</p>
+          </li>
+        );
+      })}
     </ul>
   );
 }
