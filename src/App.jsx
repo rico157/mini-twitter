@@ -19,7 +19,7 @@ export const App = () => {
 
   return (
     <>
-      <h1>Hello World!</h1>
+      <h1>Mini Twitter</h1>
       <CreateTweet
         tweets={tweets}
         setTweets={setTweets}
