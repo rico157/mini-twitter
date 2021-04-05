@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { getTweetsByDate, insertTweet } from "./API/api";
 import ListTweets from "./Components/ListTweets";
 import CreateTweet from "./Components/CreateTweet";
+import GlobalStyle from "./styles/globalStyle";
 
 Amplify.configure(awsconfig);
 
@@ -19,6 +20,7 @@ export const App = () => {
 
   return (
     <>
+      <GlobalStyle />
       <h1>Mini Twitter</h1>
       <CreateTweet
         tweets={tweets}
