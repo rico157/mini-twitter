@@ -1,12 +1,105 @@
-# Getting Started with Create React App
+<!-- PROJECT LOGO -->
+<br />
+<p align="center">
+  <h1 align="center">Mini Twitter</h3>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+  <p align="center">
+    A Twitter inspired web application built with React and AWS.
+    <br />
+    <b>Published <a href="https://dev.di7nulbm7s0x8.amplifyapp.com/">here</a></b>
+  </p>
+</p>
 
-## Available Scripts
+---
+
+![Mini Twitter example][product-screenshot]
+
+
+<!-- TABLE OF CONTENTS -->
+<details open="open">
+  <summary><h2 style="display: inline-block">Table of Contents</h2></summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li><a href="#usage">Usage</a></li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+        <li><a href="#useful-scripts">Useful Scripts</a></li>
+      </ul>
+    </li>
+  </ol>
+</details>
+
+
+
+<!-- ABOUT THE PROJECT -->
+## About The Project
+
+A Twitter inspired simple application that allows users to share text based posts. The app was built using the services provided by AWS and had a very basic backend that allowed database interaction using React.
+The app has a very simple architecture with each feature implemented as a small functional component. The interface was built using React and Styled Components.
+
+### Features
+
+- A sign up form to allow clients to create a new account and login.
+- A single list showing the latest posts for all the "tweets" on the app.
+- A text entry bar for the user to type in their post and submit it.
+
+
+### Built With
+
+* [React](https://reactjs.org/)
+  * [Create React App](https://reactjs.org/docs/create-a-new-react-app.html)
+  * [React Testing Library](https://reactjs.org/docs/testing.html)
+  * [Styled Components](https://www.styled-components.com/)
+* [AWS](https://aws.amazon.com/)
+  * [Amplify](https://aws.amazon.com/amplify/)
+  * [Cognito](https://aws.amazon.com/cognito/)
+  * [AppSync](https://aws.amazon.com/appsync/)
+
+<!-- USAGE -->
+# Usage
+
+- Go to: [dev.di7nulbm7s0x8.amplifyapp.com](https://dev.di7nulbm7s0x8.amplifyapp.com)
+
+- Sign up to the application (email validation with a code is required)
+
+- Time to tweet! 
+
+![Mini Twitter usage example][product-gif]
+
+<!-- GETTING STARTED -->
+# Getting Started
+## Prerequisites
+
+- AWS Amplify `npm install -g @aws-amplify/cli`
+
+---
+
+## Installation
+
+* `amplify init --app git@github.com:rico157/mini-twitter.git`
+
+*Installs, initializes, and provisions resources for a sample amplify application from the provided GitHub repository URL. This option must be executed in an empty directory.*
+
+* `? Select the authentication method you want to use: (Use arrow keys) -❯` **AWS profile**
+
+* `? Please choose the profile you want to use (Use arrow keys) -❯` **\<Your-profile\>**
+
+---
+
+## Useful Scripts
 
 In the project directory, you can run:
 
-### `yarn start`
+### `npm start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
@@ -14,57 +107,18 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-### `yarn test`
+### `npm test`
 
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `yarn build`
+### `amplify push `
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Provisions cloud resources with the latest local developments.                    
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### `amplify publish `
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Executes amplify push, and then builds and publishes client-side application for hosting.   
 
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[product-screenshot]: https://raw.githubusercontent.com/rico157/mini-twitter/dev/examples/example-banner.png
+[product-gif]: https://raw.githubusercontent.com/rico157/mini-twitter/dev/examples/example-usage.gif
