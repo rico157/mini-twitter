@@ -1,5 +1,13 @@
-type Tweet @model {
+type Tweet
+  @model
+  @key(
+    name: "byDate"
+    fields: ["type", "createdAt"]
+    queryField: "tweetsByDate"
+  ) {
   id: ID!
   message: String!
   likes: Int
+  createdAt: String!
+  type: String!
 }
