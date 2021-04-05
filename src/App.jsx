@@ -6,8 +6,13 @@ import { getTweetsByDate, insertTweet } from "./API/api";
 import ListTweets from "./Components/ListTweets";
 import CreateTweet from "./Components/CreateTweet";
 import GlobalStyle from "./styles/globalStyle";
+import styled from "styled-components";
 
 Amplify.configure(awsconfig);
+
+const StyledTitle = styled.h1`
+  color: #1da1f2;
+`;
 
 export const App = () => {
   const [tweets, setTweets] = useState([]);
@@ -21,7 +26,7 @@ export const App = () => {
   return (
     <>
       <GlobalStyle />
-      <h1>Mini Twitter</h1>
+      <StyledTitle>Mini Twitter</StyledTitle>
       <CreateTweet
         tweets={tweets}
         setTweets={setTweets}
