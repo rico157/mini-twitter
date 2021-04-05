@@ -10,16 +10,18 @@ describe("App component", () => {
           element.tagName.toLowerCase() === "amplify-authenticator"
       );
       expect(signUp).toBeTruthy();
+      expect(signUp).toBeInTheDocument();
     });
   });
 
   describe("App without authenticator", () => {
     test("renders Sign-Out button", () => {
       const { getByText } = render(<App />);
-      const signUp = getByText(
+      const signOutButton = getByText(
         (_, element) => element.tagName.toLowerCase() === "amplify-sign-out"
       );
-      expect(signUp).toBeTruthy();
+      expect(signOutButton).toBeTruthy();
+      expect(signOutButton).toBeInTheDocument();
     });
   });
 });
