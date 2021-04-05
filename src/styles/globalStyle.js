@@ -9,12 +9,6 @@ const GlobalStyle = createGlobalStyle`
     @media (max-width: 598px) {
       width: 100%;
     }
-
-    .sign-out {
-      position: fixed;
-      bottom: 20px;
-      right: 20px
-    }
   }
 `;
 

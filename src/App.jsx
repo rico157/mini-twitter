@@ -14,6 +14,12 @@ const StyledTitle = styled.h1`
   color: #1da1f2;
 `;
 
+const StyledSignOut = styled(AmplifySignOut)`
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+`;
+
 export const App = () => {
   const [tweets, setTweets] = useState([]);
 
@@ -33,7 +39,7 @@ export const App = () => {
         insertTweet={insertTweet}
       />
       <ListTweets tweets={tweets} />
-      <AmplifySignOut />
+      <StyledSignOut />
     </>
   );
 };
