@@ -2,7 +2,7 @@ import { withAuthenticator, AmplifySignOut } from "@aws-amplify/ui-react";
 import Amplify from "aws-amplify";
 import awsconfig from "./aws-exports";
 import { useEffect, useState } from "react";
-import { getTweets } from "./API/api";
+import { getTweetsByDate } from "./API/api";
 import ListTweets from "./Components/ListTweets";
 
 Amplify.configure(awsconfig);
@@ -11,7 +11,7 @@ export function App() {
   const [tweets, setTweets] = useState([]);
 
   useEffect(() => {
-    getTweets()
+    getTweetsByDate()
       .then((tweetsData) => setTweets(tweetsData))
       .catch(console.log);
   }, []);
