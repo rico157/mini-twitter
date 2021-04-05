@@ -10,3 +10,26 @@ export const listTweets = `
     }
   }
 `;
+
+export const listTweetsByDate = `
+query TweetsByDate(
+  $type: String
+  $sortDirection: ModelSortDirection
+  $nextToken: String
+) {
+  tweetsByDate(
+    type: $type
+    sortDirection: $sortDirection
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      likes
+      message
+      createdAt
+      type
+    }
+    nextToken
+  }
+}
+`;
