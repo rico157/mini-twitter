@@ -5,8 +5,6 @@
 
   <p align="center">
     A Twitter inspired web application built with React and AWS.
-    <br />
-    <b>Published <a href="https://dev.di7nulbm7s0x8.amplifyapp.com/">here</a></b>
   </p>
 </p>
 
@@ -67,11 +65,9 @@ The app has a very simple architecture with each feature implemented as a small 
 <!-- USAGE -->
 # Usage
 
-- Go to: [dev.di7nulbm7s0x8.amplifyapp.com](https://dev.di7nulbm7s0x8.amplifyapp.com)
-
 - Sign up to the application (email validation with a code is required)
 
-- Time to tweet! 
+- Leave your tweets! 
 
 ![Mini Twitter usage example][product-gif]
 
